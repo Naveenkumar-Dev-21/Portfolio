@@ -1,0 +1,8 @@
+{
+  "dependencies": {
+    "aos": "^2.3.4",
+    "react-tsparticles": "^2.12.2",
+    "remixicon": "^4.6.0",
+    "tsparticles": "^3.8.1"
+  }
+}
