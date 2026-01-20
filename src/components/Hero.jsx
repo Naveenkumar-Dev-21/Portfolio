@@ -50,7 +50,7 @@ const Hero = () => {
                             }}
                         />
                         <motion.img
-                            src="/IMG-20250903-WA0006.jpg"
+                            src="/profile.jpg"
                             alt="Naveenkumar"
                             className="hero-image"
                             whileHover={{ scale: 1.05 }}
@@ -89,7 +89,7 @@ const Hero = () => {
 
                     <motion.div className="hero-buttons" variants={itemVariants}>
                         <motion.a
-                            href="/NaveennkumarV - Resume.pdf"
+                            href="/resume.pdf"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="btn btn-primary"
