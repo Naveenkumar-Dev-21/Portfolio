@@ -1,0 +1,22 @@
+.skills-grid {
+    margin-top: var(--spacing-xl);
+}
+
+.skill-card {
+    text-align: center;
+    padding: var(--spacing-xl);
+    cursor: pointer;
+}
+
+.skill-icon {
+    font-size: 3rem;
+    margin-bottom: var(--spacing-md);
+    display: flex;
+    justify-content: center;
+}
+
+.skill-name {
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: var(--text-primary);
+}

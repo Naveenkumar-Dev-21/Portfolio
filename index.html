@@ -1,193 +1,22 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
-    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Naveenkumar - Passionate Developer Crafting Secure and Innovative Solutions" />
+    <title>Naveenkumar | Portfolio</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Outfit:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
 </head>
+
 <body>
-    <nav>
-        <div class="nav-container">
-            <a href="#about" class="nav-logo">Naveenkumar</a>
-            <ul class="nav-menu">
-                <li><a href="#about">About</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#potential-projects">Future Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </div>
-    </nav>
-    <div id="particles-js"></div>
-    <header class="hero-section">
-        <div class="hero-content">
-            <img src="profile.jpg" alt="My Image" class="profile-image">
-            <h1>Naveenkumar</h1>
-            <p class="tagline">Passionate Developer Crafting Secure and Innovative Solutions</p>
-            <div class="hero-actions">
-                <a href="Naveenkumar_V_Resume.pdf" class="btn primary-btn">View Resume</a>
-                <a href="#contact" class="btn secondary-btn">Contact Me</a>
-            </div>
-        </div>
-    </header>
-    <main>
-        <section id="about" class="section-padding" data-aos="fade-up">
-            <h2 class="section-title">About Me</h2>
-            <p class="section-subtitle">A little bit about my journey and passion for technology.</p>
-            <div class="about-content">
-                <p>
-                    Welcome to my portfolio! I am Naveenkumar, a passionate and dedicated developer with a strong foundation in building secure and innovative applications. My journey in technology has been driven by a curiosity for solving complex problems and a desire to create software that makes a difference. I have hands-on experience in mobile and desktop development, with a keen interest in machine learning and software security. I am actively learning new concepts related to penetration testing and ethical hacking, driven by my passion for capturing flags and responsibly taking control of vulnerable machines in practice environments. My clear ambition is to build a career in the cybersecurity domain.
-                </p>
-            </div>
-        </section>
-        <section id="skills" class="section-padding" data-aos="fade-up">
-            <h2 class="section-title">Skills</h2>
-            <div class="skills-grid">
-                <div class="skill-card"><i class="ri-python-fill"></i><span>Python</span></div>
-                <div class="skill-card"><i class="ri-flutter-fill"></i><span>Dart</span></div>
-                <div class="skill-card"><i class="ri-flutter-fill"></i><span>Flutter</span></div>
-                <div class="skill-card"><i class="ri-database-2-fill"></i><span>MinIO</span></div>
-                <div class="skill-card"><i class="ri-robot-2-fill"></i><span>NLP</span></div>
-                <div class="skill-card"><i class="ri-git-branch-fill"></i><span>Git</span></div>
-                <div class="skill-card"><i class="ri-code-s-slash-line"></i><span>VS Code</span></div>
-                <div class="skill-card"><i class="ri-brain-fill"></i><span>Machine Learning</span></div>
-                <div class="skill-card"><i class="ri-smartphone-fill"></i><span>Mobile Development</span></div>
-                <div class="skill-card"><i class="ri-macbook-line"></i><span>Desktop Development</span></div>
-                <div class="skill-card"><i class="ri-shield-star-line"></i><span>Software Security</span></div>
-            </div>
-        </section>
-        <section id="projects" class="section-padding" data-aos="fade-up">
-            <h2 class="section-title">Projects</h2>
-            <div class="project-grid">
-                <div class="project-card">
-                    <h3>File Sharing App</h3>
-                    <p>A secure file sharing application.</p>
-                    <p class="tech-stack"><strong>Technologies Used:</strong> MinIO for object storage.</p>
-                </div>
-                <div class="project-card">
-                    <h3>Keylogger</h3>
-                    <p>A discreet keylogger application for monitoring keyboard inputs, designed with ethical considerations for parental control or personal security auditing.</p>
-                    <p class="tech-stack"><strong>Technologies Used:</strong> Python, pynput, threading, data encryption (for logs).</p>
-                    <h4>Features:</h4>
-                    <ul>
-                        <li>Captures keystrokes and saves them to an encrypted log file.</li>
-                        <li>Runs in the background without user intervention.</li>
-                        <li>Secure log file management to prevent unauthorized access.</li>
-                        <li>Configurable logging intervals and output formats.</li>
-                    </ul>
-                </div>
-                <div class="project-card">
-                    <h3>Mobile Achievement Tracker</h3>
-                    <p>A cross-platform mobile application designed to help users track and celebrate their recent achievements and goals.</p>
-                    <p class="tech-stack"><strong>Technologies Used:</strong> Flutter, Dart, Firebase (Firestore, Authentication), Provider for state management.</p>
-                    <h4>Features:</h4>
-                    <ul>
-                        <li>User authentication and personalized profiles.</li>
-                        <li>Add, edit, and delete achievements with details (date, description, category).</li>
-                        <li>Progress tracking for long-term goals.</li>
-                        <li>Visual representation of achievements (e.g., badges, progress bars).</li>
-                        <li>Notification system for reminders and milestones.</li>
-                        <li>Cloud synchronization for data backup across devices.</li>
-                    </ul>
-                </div>
-                <div class="project-card">
-                    <h3>Cipher Hide</h3>
-                    <p>A steganography tool that allows users to hide text messages within **image, audio, and video files**, ensuring covert communication.</p>
-                    <p class="tech-stack"><strong>Technologies Used:</strong> Python, Pillow (PIL), Pydub (for audio/video), Bitwise operations.</p>
-                    <h4>Features:</h4>
-                    <ul>
-                        <li>Embeds hidden messages into images, audio, and video without visible alterations.</li>
-                        <li>Extracts hidden messages from modified images, audio, and video files.</li>
-                        <li>Supports various file formats (PNG, BMP for images; WAV, MP3 for audio; MP4, AVI for video).</li>
-                        <li>Intuitive command-line interface for ease of use.</li>
-                    </ul>
-                </div>
-                <div class="project-card">
-                    <h3>Dark Web Monitoring Tool</h3>
-                    <p>An automated tool designed to scan dark web forums and marketplaces for mentions of specific keywords, such as personal data or company names, to alert users of potential breaches.</p>
-                    <p class="tech-stack"><strong>Technologies Used:</strong> Python, Scrapy (for crawling), Tor (for anonymity), Natural Language Processing (for analysis).</p>
-                    <h4>Features:</h4>
-                    <ul>
-                        <li>Automated crawling of specified dark web sites (requires Tor).</li>
-                        <li>Keyword-based searching for sensitive information.</li>
-                        <li>Real-time alerts for detected mentions.</li>
-                        <li>Generates detailed reports of findings.</li>
-                        <li>Designed with privacy and ethical hacking principles in mind.</li>
-                    </ul>
-                </div>
-                <div class="project-card">
-                    <h3>Media Player</h3>
-                    <p>A desktop music and video player with advanced features and a modern UI.</p>
-                    <p class="tech-stack"><strong>Technologies Used:</strong> Python, PyQt5, QMediaPlayer, Mutagen, Pygame, yt-dlp.</p>
-                    <h4>Features:</h4>
-                    <ul>
-                        <li>Supports both audio and video playback.</li>
-                        <li>Modern and customizable UI with multiple themes.</li>
-                        <li>Audio visualization that responds to the beat.</li>
-                        <li>Playlist management (add local files, YouTube URLs).</li>
-                        <li>Adjustable equalizer presets.</li>
-                        <li>Customizable keyboard shortcuts for playback control (volume, seeking, next/previous track, fullscreen, play/pause).</li>
-                        <li>Auto-hiding controls in fullscreen mode for immersive viewing.</li>
-                    </ul>
-                </div>
-                <div class="project-card">
-                    <h3>Multi-Modal Biometric Authentication System (Prototype)</h3>
-                    <p>A desktop application demonstrating various biometric authentication modalities for enhanced security, including face, voice, iris, and fingerprint recognition.</p>
-                    <p class="tech-stack"><strong>Technologies Used:</strong> Python, Tkinter, OpenCV, Librosa, Sounddevice, SIFT, FLANN.</p>
-                    <h4>Features:</h4>
-                    <ul>
-                        <li>Multi-modal authentication: Face, Voice, Iris, and Fingerprint.</li>
-                        <li>Simulated dataset management and model training for various biometric types.</li>
-                        <li>Real-time capture and preliminary processing of biometric data.</li>
-                        <li>User-friendly GUI for registration and authentication.</li>
-                        <li>Integration of notification system for authentication events.</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-        <section id="potential-projects" class="section-padding" data-aos="fade-up">
-            <h2 class="section-title">Potential Future Projects</h2>
-            <div class="project-grid">
-                <div class="project-card">
-                    <h3>Voice Assistant</h3>
-                    <p>An intelligent voice assistant capable of performing various tasks, answering queries, and controlling smart devices through natural language commands.</p>
-                    <p class="tech-stack"><strong>Potential Technologies:</strong> Python, SpeechRecognition, gTTS, NLTK, API integrations.</p>
-                </div>
-                <div class="project-card">
-                    <h3>Hand Sign Recognition System</h3>
-                    <p>A real-time system that interprets hand gestures and signs using computer vision for intuitive human-computer interaction or communication for the hearing impaired.</p>
-                    <p class="tech-stack"><strong>Potential Technologies:</strong> Python, OpenCV, TensorFlow/Keras, MediaPipe.</p>
-                </div>
-            </div>
-        </section>
-        <section id="contact" class="section-padding" data-aos="fade-up">
-            <h2 class="section-title">Get in Touch</h2>
-            <p class="section-subtitle">I'm currently available for freelance work and open to discussing new projects. Let's create something amazing together!</p>
-            <div class="contact-links">
-                <a href="mailto:naveenkumar2006.kongu@gmail.com" class="contact-link"><i class="ri-mail-fill"></i>Email</a>
-                <a href="https://github.com/Naveenkumar-Dev-21" target="_blank" class="contact-link"><i class="ri-github-fill"></i> GitHub</a>
-                <a href="https://www.linkedin.com/in/naveen-kumar-53b6ab291/" target="_blank" class="contact-link"><i class="ri-linkedin-box-fill"></i> LinkedIn</a>
-            </div>
-        </section>
-    </main>
-    <footer class="footer">
-        <div class="footer-container">
-            <p>&copy; 2025 Naveenkumar. Developed with Care.</p>
-            <div class="social-links-footer">
-                <a href="https://github.com/Naveenkumar-Dev-21" target="_blank" aria-label="GitHub"><i class="ri-github-fill"></i></a>
-                <a href="https://www.linkedin.com/in/naveen-kumar-53b6ab291/" target="_blank" aria-label="LinkedIn"><i class="ri-linkedin-box-fill"></i></a>
-                <a href="mailto:naveenkumar2006.kongu@gmail.com" aria-label="Email"><i class="ri-mail-fill"></i></a>
-            </div>
-        </div>
-    </footer>
-    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-    <script src="script.js"></script>
-    <a href="#" class="scroll-to-top" aria-label="Scroll to top"><i class="ri-arrow-up-s-line"></i></a>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
 </body>
+
 </html>
