@@ -50,7 +50,7 @@ const Hero = () => {
                             }}
                         />
                         <motion.img
-                            src="/backup/profile.jpg"
+                            src="/IMG-20250903-WA0006.jpg"
                             alt="Naveenkumar"
                             className="hero-image"
                             whileHover={{ scale: 1.05 }}
@@ -120,7 +120,7 @@ const Hero = () => {
                             <FaGithub />
                         </motion.a>
                         <motion.a
-                            href="https://www.linkedin.com/in/naveen-kumar-53b6ab291/"
+                            href="https://www.linkedin.com/in/naveenkumarv-varatharajan"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="social-link"

@@ -26,8 +26,8 @@ const Contact = () => {
         {
             name: 'LinkedIn',
             icon: FaLinkedin,
-            href: 'https://www.linkedin.com/in/naveen-kumar-53b6ab291/',
-            label: 'naveen-kumar',
+            href: 'https://www.linkedin.com/in/naveenkumarv-varatharajan',
+            label: 'naveenkumarv-varatharajan',
             color: '#0A66C2',
         },
     ]
