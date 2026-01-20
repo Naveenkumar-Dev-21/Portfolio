@@ -89,7 +89,9 @@ const Hero = () => {
 
                     <motion.div className="hero-buttons" variants={itemVariants}>
                         <motion.a
-                            href="/backup/Naveenkumar_V_Resume.pdf"
+                            href="/NaveennkumarV - Resume.pdf"
+                            target="_blank"
+                            rel="noopener noreferrer"
                             className="btn btn-primary"
                             whileHover={{ scale: 1.05 }}
                             whileTap={{ scale: 0.95 }}
