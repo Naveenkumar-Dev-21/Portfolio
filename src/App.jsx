@@ -24,7 +24,7 @@ const links = [
   { label: 'linkedin', href: 'https://www.linkedin.com/in/naveenkumarv-varatharajan' },
   { label: 'email', href: 'mailto:naveenkumar2006.kongu@gmail.com' },
   { label: 'resume', href: '/resume.pdf' },
-  { label: 'blog', href: 'https://ranger.hashnode.dev' },
+  { label: 'blog', href: 'https://rangerblogs.hashnode.dev' },
 ]
 
 function App() {
