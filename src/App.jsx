@@ -81,7 +81,7 @@ const links = [
   { label: 'linkedin', href: 'https://www.linkedin.com/in/naveenkumarv-varatharajan', perm: 'drwxr-xr-x' },
   { label: 'email', href: 'mailto:naveenkumar2006.kongu@gmail.com', perm: '-rw-r--r--' },
   { label: 'resume', href: '/resume.pdf', perm: '-rw-r--r--' },
-  { label: 'blog', href: 'https://ranger.hashnode.dev', perm: 'drwxr-xr-x' },
+  { label: 'blog', href: 'https://rangerblogs.hashnode.dev', perm: 'drwxr-xr-x' },
 ]
 
 /* ── Matrix Rain Background ── */
