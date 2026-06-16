@@ -69,7 +69,7 @@
 }
 
 html {
-  font-size: 16px;
+  font-size: 20px;
   scroll-behavior: smooth;
 }
 
@@ -115,7 +115,7 @@ body::after {
 
 #root {
   width: 100%;
-  max-width: 760px;
+  max-width: 900px;
   margin: 0 auto;
   padding: 3rem 1.5rem 4rem;
   position: relative;
@@ -239,8 +239,8 @@ body::after {
 }
 
 .hero-avatar {
-  width: 100px;
-  height: 100px;
+  width: 130px;
+  height: 130px;
   border-radius: var(--radius-lg);
   object-fit: cover;
   object-position: top center;
@@ -262,15 +262,15 @@ body::after {
   position: absolute;
   bottom: -4px;
   right: -4px;
-  width: 26px;
-  height: 26px;
+  width: 32px;
+  height: 32px;
   border-radius: 50%;
   background: var(--bg-primary);
   border: 2px solid var(--green);
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 0.7rem;
+  font-size: 0.9rem;
 }
 
 .hero-info {
@@ -305,8 +305,8 @@ body::after {
 }
 
 .hero-role-icon svg {
-  width: 14px;
-  height: 14px;
+  width: 18px;
+  height: 18px;
 }
 
 .hero-meta {
@@ -363,8 +363,8 @@ body::after {
 }
 
 .bio-label svg {
-  width: 12px;
-  height: 12px;
+  width: 16px;
+  height: 16px;
 }
 
 .bio-text {
@@ -409,8 +409,8 @@ body::after {
 }
 
 .link-chip svg {
-  width: 14px;
-  height: 14px;
+  width: 18px;
+  height: 18px;
   flex-shrink: 0;
 }
 
@@ -432,8 +432,8 @@ body::after {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 30px;
-  height: 30px;
+  width: 38px;
+  height: 38px;
   border-radius: var(--radius-sm);
   background: var(--cyan-dim);
   border: 1px solid rgba(34, 211, 238, 0.15);
@@ -442,8 +442,8 @@ body::after {
 }
 
 .section-icon svg {
-  width: 14px;
-  height: 14px;
+  width: 18px;
+  height: 18px;
 }
 
 .section-title {
@@ -539,14 +539,14 @@ body::after {
 }
 
 .capability-icon {
-  width: 36px;
-  height: 36px;
+  width: 44px;
+  height: 44px;
   border-radius: var(--radius-sm);
   display: flex;
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
-  font-size: 0.95rem;
+  font-size: 1.2rem;
 }
 
 .capability-icon.pentest { background: var(--red-dim); border: 1px solid rgba(248, 113, 113, 0.15); }
@@ -787,8 +787,8 @@ body::after {
 }
 
 .cert-badge {
-  width: 8px;
-  height: 8px;
+  width: 10px;
+  height: 10px;
   border-radius: 50%;
   flex-shrink: 0;
 }
@@ -875,8 +875,8 @@ body::after {
   }
 
   .hero-avatar {
-    width: 80px;
-    height: 80px;
+    width: 100px;
+    height: 100px;
   }
 
   .hero-name {
