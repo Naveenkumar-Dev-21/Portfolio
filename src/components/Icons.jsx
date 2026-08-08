@@ -129,4 +129,8 @@ export const icons = {
   ),
 }
 
-export default icons
+/* Usage: <Icon name="shield" />. Unknown names render nothing rather
+   than crashing, so a typo in src/data/* degrades gracefully. */
+export default function Icon({ name }) {
+  return icons[name] ?? null
+}

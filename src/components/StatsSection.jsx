@@ -1,14 +1,14 @@
-import SectionHeader from './SectionHeader.jsx'
-import { icons } from './Icons.jsx'
-import { ctfStats, ctfPlatforms } from '../data/stats.js'
+import SectionHeader from './SectionHeader'
+import Icon from './Icons'
+import { ctfStats, ctfPlatforms } from '../data/stats'
 
-export default function StatsSection() {
+export default function StatsSection({ index }) {
   return (
-    <section className="section fade-up fade-up-5" id="stats">
-      <SectionHeader icon={icons.flag} title="CTF & Training" />
+    <section className="section" id="training">
+      <SectionHeader index={index} icon={<Icon name="flag" />} title="CTF & Training" />
       <div className="stats-grid">
         {ctfStats.map((stat) => (
-          <div key={stat.label} className={`stat-card ${stat.accent}`}>
+          <div className={`stat-card ${stat.accent}`} key={stat.label}>
             <span className="stat-value">{stat.value}</span>
             <span className="stat-label">{stat.label}</span>
             <span className="stat-note">{stat.note}</span>
@@ -16,16 +16,16 @@ export default function StatsSection() {
         ))}
       </div>
       <div className="platform-row">
-        {ctfPlatforms.map((platform) => (
+        {ctfPlatforms.map((p) => (
           <a
-            key={platform.name}
-            href={platform.href}
             className="platform-chip"
+            key={p.name}
+            href={p.href}
             target="_blank"
-            rel="noopener noreferrer"
+            rel="noreferrer noopener"
           >
-            <span className="platform-name">{platform.name}</span>
-            <span className="platform-handle">{platform.handle}</span>
+            <span className="platform-name">{p.name}</span>
+            <span className="platform-handle">{p.handle}</span>
           </a>
         ))}
       </div>

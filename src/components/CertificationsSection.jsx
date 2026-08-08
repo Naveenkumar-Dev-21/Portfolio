@@ -1,17 +1,21 @@
-import SectionHeader from './SectionHeader.jsx'
-import { icons } from './Icons.jsx'
-import { certifications } from '../data/content.js'
+import SectionHeader from './SectionHeader'
+import Icon from './Icons'
+import { certifications } from '../data/content'
 
-export default function CertificationsSection() {
+export default function CertificationsSection({ index }) {
   return (
-    <section className="section fade-up fade-up-7" id="certifications">
-      <SectionHeader icon={icons.award} title="Certifications" />
-      <div className="cert-list">
+    <section className="section" id="certifications">
+      <SectionHeader index={index} icon={<Icon name="award" />} title="Certifications" />
+      <div className="cert-grid">
         {certifications.map((cert) => (
-          <div key={cert} className="cert-item">
-            <span className="cert-badge verified" />
-            <span className="cert-name">{cert}</span>
-            <span className="cert-status">Verified</span>
+          <div className="cert" key={cert.name}>
+            <span className="cert-mark" aria-hidden="true">
+              <Icon name="award" />
+            </span>
+            <span className="cert-body">
+              <span className="cert-name">{cert.name}</span>
+              <span className="cert-issuer">{cert.issuer}</span>
+            </span>
           </div>
         ))}
       </div>

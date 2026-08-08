@@ -1,12 +1,14 @@
-import { personalInfo } from '../data/content.js'
+import { personalInfo } from '../data/content'
 
 export default function Footer() {
   return (
-    <footer className="footer fade-up fade-up-8" id="footer">
-      <p className="footer-line">
-        © {new Date().getFullYear()} <span className="footer-accent">{personalInfo.name}</span> · All systems secured
+    <footer className="footer">
+      <p>
+        © {new Date().getFullYear()} <span className="footer-accent">{personalInfo.name}</span>
+        <span className="footer-sep">·</span>
+        <a href={`mailto:${personalInfo.email}`}>{personalInfo.email}</a>
       </p>
-      <p>Built with React &amp; Vite</p>
+      <p className="footer-sub">Built with React &amp; Vite</p>
     </footer>
   )
 }

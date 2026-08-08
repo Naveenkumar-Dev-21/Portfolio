@@ -1,14 +1,27 @@
-import SectionHeader from './SectionHeader.jsx'
-import { icons } from './Icons.jsx'
-import { skills } from '../data/content.js'
+import SectionHeader from './SectionHeader'
+import Icon from './Icons'
+import { skillGroups } from '../data/content'
 
-export default function SkillsSection() {
+/* Matrix layout: category label in a left column, chips to the right.
+   Mirrors how the resume groups these. */
+export default function SkillsSection({ index }) {
   return (
-    <section className="section fade-up fade-up-4" id="skills">
-      <SectionHeader icon={icons.wrench} title="Security Toolkit" />
-      <div className="skills-grid">
-        {skills.map((skill) => (
-          <span key={skill} className="skill-tag">{skill}</span>
+    <section className="section" id="skills">
+      <SectionHeader index={index} icon={<Icon name="wrench" />} title="Technical Skills" />
+
+      <div className="matrix">
+        {skillGroups.map((group) => (
+          <div className={`matrix-row matrix-row--${group.accent}`} key={group.label}>
+            <div className="matrix-label">
+              <span className="matrix-bar" aria-hidden="true" />
+              {group.label}
+            </div>
+            <div className="matrix-items">
+              {group.items.map((item) => (
+                <span className="matrix-item" key={item}>{item}</span>
+              ))}
+            </div>
+          </div>
         ))}
       </div>
     </section>

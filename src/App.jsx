@@ -1,40 +1,40 @@
-import StatusBar from './components/StatusBar.jsx'
-import Hero from './components/Hero.jsx'
-import BioCard from './components/BioCard.jsx'
-import LinksRow from './components/LinksRow.jsx'
-import AboutMeSection from './components/AboutMeSection.jsx'
-import SkillsSection from './components/SkillsSection.jsx'
-import AreasOfInterest from './components/AreasOfInterest.jsx'
-import StatsSection from './components/StatsSection.jsx'
-import ExperienceSection from './components/ExperienceSection.jsx'
-import ProjectsSection from './components/ProjectsSection.jsx'
-import EducationSection from './components/EducationSection.jsx'
-import CertificationsSection from './components/CertificationsSection.jsx'
-import LanguagesSection from './components/LanguagesSection.jsx'
-import Footer from './components/Footer.jsx'
+import Sidebar from './components/Sidebar'
+import Summary from './components/Summary'
+import ExperienceSection from './components/ExperienceSection'
+import ProjectsSection from './components/ProjectsSection'
+import SkillsSection from './components/SkillsSection'
+import StatsSection from './components/StatsSection'
+import AreasOfInterest from './components/AreasOfInterest'
+import CertificationsSection from './components/CertificationsSection'
+import EducationSection from './components/EducationSection'
+import AboutSection from './components/AboutSection'
+import Footer from './components/Footer'
 
-/* Page order lives here. To add a section: build it in
-   src/components/, drop its data in src/data/, then add
-   the tag below wherever you want it to appear. */
-function App() {
+/* Section order lives here. Each gets its report number from its
+   position, so reordering renumbers automatically — to add a section,
+   build it in components/, put its data in data/, and drop it in. */
+const SECTIONS = [
+  ExperienceSection,
+  ProjectsSection,
+  SkillsSection,
+  StatsSection,
+  AreasOfInterest,
+  CertificationsSection,
+  EducationSection,
+  AboutSection,
+]
+
+export default function App() {
   return (
-    <>
-      <StatusBar />
-      <Hero />
-      <BioCard />
-      <LinksRow />
-      <AboutMeSection />
-      <SkillsSection />
-      <AreasOfInterest />
-      <StatsSection />
-      <ExperienceSection />
-      <ProjectsSection />
-      <EducationSection />
-      <CertificationsSection />
-      <LanguagesSection />
-      <Footer />
-    </>
+    <div className="layout">
+      <Sidebar />
+      <main className="main">
+        <Summary />
+        {SECTIONS.map((Section, i) => (
+          <Section key={i} index={i + 1} />
+        ))}
+        <Footer />
+      </main>
+    </div>
   )
 }
-
-export default App
