@@ -1,5 +1,40 @@
+# Reinstalled inside the image by `npm ci`; copying the host tree in would
+# be slow and can smuggle in wrong-platform native binaries.
 node_modules
 dist
+dist-ssr
+build
+
+# Version control and CI
 .git
 .gitignore
+.github
+.gitlab-ci.yml
+
+# Secrets — must never enter the build context. Anything COPY'd stays
+# recoverable from the published image layers even if deleted later.
+.env
+.env.*
+*.pem
+*.key
+
+# Editor / OS noise
+.vscode
+.idea
+.DS_Store
+*.swp
+*.suo
+
+# Superseded by the 57 kB profile.webp the site actually loads. Excluding
+# it keeps 1.5 MB of dead weight out of every pull.
+public/profile.jpg
+
+# Docs and local tooling that don't belong in a runtime image
 *.md
+docker-compose.yml
+profile-snake-workflow.yml
+.vercel
+coverage
+*.log
+npm-debug.log*
+.cache

@@ -1,0 +1,45 @@
+# Pull-and-run on the server:
+#   docker compose pull && docker compose up -d
+#
+# Set IMAGE to your Docker Hub repo, either in a .env file next to this
+# one or inline:  IMAGE=youruser/portfolio:latest docker compose up -d
+services:
+  portfolio:
+    image: ${IMAGE:-naveenkumar/portfolio:latest}
+    container_name: portfolio
+    restart: unless-stopped
+
+    # Container listens on 8080 as a non-root user. Publishing to 8080 on
+    # the host keeps it off a privileged port — put a TLS-terminating
+    # reverse proxy (Caddy, Traefik, nginx) in front for the public site.
+    ports:
+      - "8080:8080"
+
+    # ---- Runtime hardening ------------------------------------------
+    # The image serves static files and needs no write access to its own
+    # filesystem, so lock it down. nginx still needs scratch space for
+    # its pid file and caches, hence the tmpfs mounts.
+    read_only: true
+    tmpfs:
+      - /tmp
+      - /var/cache/nginx
+    security_opt:
+      - no-new-privileges:true
+    cap_drop:
+      - ALL
+
+    # Cap log growth so a long-running container can't fill the disk.
+    logging:
+      driver: json-file
+      options:
+        max-size: "10m"
+        max-file: "3"
+
+    # Reuses the HEALTHCHECK baked into the image; declared here so
+    # `docker compose ps` reports health without extra flags.
+    healthcheck:
+      test: ["CMD", "wget", "-q", "--no-cache", "-O", "/dev/null", "http://127.0.0.1:8080/healthz"]
+      interval: 30s
+      timeout: 3s
+      start_period: 5s
+      retries: 3
