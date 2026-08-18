@@ -21,30 +21,32 @@ export function Typewriter() {
 
   const currentRole = roles[currentRoleIndex]
 
-  const tick = useCallback(() => {
+  useEffect(() => {
+    let timeout: NodeJS.Timeout;
+
     if (!isDeleting) {
       if (displayText.length < currentRole.length) {
-        setDisplayText(currentRole.slice(0, displayText.length + 1))
-        setTimeout(tick, TYPING_SPEED)
+        timeout = setTimeout(() => {
+          setDisplayText(currentRole.slice(0, displayText.length + 1));
+        }, TYPING_SPEED);
       } else {
-        setTimeout(() => setIsDeleting(true), PAUSE_BEFORE_DELETE)
+        timeout = setTimeout(() => setIsDeleting(true), PAUSE_BEFORE_DELETE);
       }
     } else {
       if (displayText.length > 0) {
-        setDisplayText(currentRole.slice(0, displayText.length - 1))
-        setTimeout(tick, DELETING_SPEED)
+        timeout = setTimeout(() => {
+          setDisplayText(currentRole.slice(0, displayText.length - 1));
+        }, DELETING_SPEED);
       } else {
-        setIsDeleting(false)
-        setCurrentRoleIndex((prev) => (prev + 1) % roles.length)
-        setTimeout(tick, PAUSE_BEFORE_NEXT)
+        setIsDeleting(false);
+        setCurrentRoleIndex((prev) => (prev + 1) % roles.length);
+        // Add a small pause before typing the next role
+        timeout = setTimeout(() => {}, PAUSE_BEFORE_NEXT);
       }
     }
-  }, [currentRole, displayText, isDeleting])
 
-  useEffect(() => {
-    const timeout = setTimeout(tick, PAUSE_BEFORE_NEXT)
-    return () => clearTimeout(timeout)
-  }, [tick])
+    return () => clearTimeout(timeout);
+  }, [displayText, isDeleting, currentRole, roles.length]);
 
   return <span className="text-text-primary font-medium">{displayText}</span>
 }
