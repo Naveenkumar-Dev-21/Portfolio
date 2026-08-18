@@ -38,10 +38,10 @@ export function Typewriter() {
           setDisplayText(currentRole.slice(0, displayText.length - 1));
         }, DELETING_SPEED);
       } else {
-        setIsDeleting(false);
-        setCurrentRoleIndex((prev) => (prev + 1) % roles.length);
-        // Add a small pause before typing the next role
-        timeout = setTimeout(() => {}, PAUSE_BEFORE_NEXT);
+        timeout = setTimeout(() => {
+          setIsDeleting(false);
+          setCurrentRoleIndex((prev) => (prev + 1) % roles.length);
+        }, PAUSE_BEFORE_NEXT);
       }
     }
 
