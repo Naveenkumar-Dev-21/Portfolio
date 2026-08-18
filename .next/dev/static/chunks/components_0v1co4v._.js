@@ -1873,55 +1873,59 @@ function Typewriter() {
     const [displayText, setDisplayText] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])('');
     const [isDeleting, setIsDeleting] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(false);
     const currentRole = roles[currentRoleIndex];
-    const tick = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useCallback"])({
-        "Typewriter.useCallback[tick]": ()=>{
+    (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useEffect"])({
+        "Typewriter.useEffect": ()=>{
+            let timeout;
             if (!isDeleting) {
                 if (displayText.length < currentRole.length) {
-                    setDisplayText(currentRole.slice(0, displayText.length + 1));
-                    setTimeout(tick, TYPING_SPEED);
+                    timeout = setTimeout({
+                        "Typewriter.useEffect": ()=>{
+                            setDisplayText(currentRole.slice(0, displayText.length + 1));
+                        }
+                    }["Typewriter.useEffect"], TYPING_SPEED);
                 } else {
-                    setTimeout({
-                        "Typewriter.useCallback[tick]": ()=>setIsDeleting(true)
-                    }["Typewriter.useCallback[tick]"], PAUSE_BEFORE_DELETE);
+                    timeout = setTimeout({
+                        "Typewriter.useEffect": ()=>setIsDeleting(true)
+                    }["Typewriter.useEffect"], PAUSE_BEFORE_DELETE);
                 }
             } else {
                 if (displayText.length > 0) {
-                    setDisplayText(currentRole.slice(0, displayText.length - 1));
-                    setTimeout(tick, DELETING_SPEED);
+                    timeout = setTimeout({
+                        "Typewriter.useEffect": ()=>{
+                            setDisplayText(currentRole.slice(0, displayText.length - 1));
+                        }
+                    }["Typewriter.useEffect"], DELETING_SPEED);
                 } else {
-                    setIsDeleting(false);
-                    setCurrentRoleIndex({
-                        "Typewriter.useCallback[tick]": (prev)=>(prev + 1) % roles.length
-                    }["Typewriter.useCallback[tick]"]);
-                    setTimeout(tick, PAUSE_BEFORE_NEXT);
+                    timeout = setTimeout({
+                        "Typewriter.useEffect": ()=>{
+                            setIsDeleting(false);
+                            setCurrentRoleIndex({
+                                "Typewriter.useEffect": (prev)=>(prev + 1) % roles.length
+                            }["Typewriter.useEffect"]);
+                        }
+                    }["Typewriter.useEffect"], PAUSE_BEFORE_NEXT);
                 }
             }
-        }
-    }["Typewriter.useCallback[tick]"], [
-        currentRole,
-        displayText,
-        isDeleting
-    ]);
-    (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useEffect"])({
-        "Typewriter.useEffect": ()=>{
-            const timeout = setTimeout(tick, PAUSE_BEFORE_NEXT);
             return ({
                 "Typewriter.useEffect": ()=>clearTimeout(timeout)
             })["Typewriter.useEffect"];
         }
     }["Typewriter.useEffect"], [
-        tick
+        displayText,
+        isDeleting,
+        currentRole,
+        roles.length
     ]);
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
         className: "text-text-primary font-medium",
         children: displayText
     }, void 0, false, {
         fileName: "[project]/components/typewriter.tsx",
-        lineNumber: 49,
+        lineNumber: 51,
         columnNumber: 10
     }, this);
 }
-_s(Typewriter, "L2LTYz8ejk4JRdmv7rWUI31XH/4=");
+_s(Typewriter, "cm20mSIAyjdlH6N1q0AHzdRDKhw=");
 _c = Typewriter;
 var _c;
 __turbopack_context__.k.register(_c, "Typewriter");

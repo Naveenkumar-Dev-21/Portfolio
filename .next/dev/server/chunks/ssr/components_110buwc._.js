@@ -1793,41 +1793,41 @@ function Typewriter() {
     const [displayText, setDisplayText] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])('');
     const [isDeleting, setIsDeleting] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])(false);
     const currentRole = roles[currentRoleIndex];
-    const tick = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useCallback"])(()=>{
+    (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useEffect"])(()=>{
+        let timeout;
         if (!isDeleting) {
             if (displayText.length < currentRole.length) {
-                setDisplayText(currentRole.slice(0, displayText.length + 1));
-                setTimeout(tick, TYPING_SPEED);
+                timeout = setTimeout(()=>{
+                    setDisplayText(currentRole.slice(0, displayText.length + 1));
+                }, TYPING_SPEED);
             } else {
-                setTimeout(()=>setIsDeleting(true), PAUSE_BEFORE_DELETE);
+                timeout = setTimeout(()=>setIsDeleting(true), PAUSE_BEFORE_DELETE);
             }
         } else {
             if (displayText.length > 0) {
-                setDisplayText(currentRole.slice(0, displayText.length - 1));
-                setTimeout(tick, DELETING_SPEED);
+                timeout = setTimeout(()=>{
+                    setDisplayText(currentRole.slice(0, displayText.length - 1));
+                }, DELETING_SPEED);
             } else {
-                setIsDeleting(false);
-                setCurrentRoleIndex((prev)=>(prev + 1) % roles.length);
-                setTimeout(tick, PAUSE_BEFORE_NEXT);
+                timeout = setTimeout(()=>{
+                    setIsDeleting(false);
+                    setCurrentRoleIndex((prev)=>(prev + 1) % roles.length);
+                }, PAUSE_BEFORE_NEXT);
             }
         }
-    }, [
-        currentRole,
-        displayText,
-        isDeleting
-    ]);
-    (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useEffect"])(()=>{
-        const timeout = setTimeout(tick, PAUSE_BEFORE_NEXT);
         return ()=>clearTimeout(timeout);
     }, [
-        tick
+        displayText,
+        isDeleting,
+        currentRole,
+        roles.length
     ]);
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
         className: "text-text-primary font-medium",
         children: displayText
     }, void 0, false, {
         fileName: "[project]/components/typewriter.tsx",
-        lineNumber: 49,
+        lineNumber: 51,
         columnNumber: 10
     }, this);
 }
