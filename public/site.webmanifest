@@ -1,0 +1,23 @@
+{
+  "name": "Naveenkumar V — Penetration Tester & Security Researcher",
+  "short_name": "Naveenkumar V",
+  "description": "Portfolio of Naveenkumar V — penetration tester, security researcher, and Information Technology student focused on offensive security, vulnerability research, and security engineering.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0B0F0E",
+  "theme_color": "#0B0F0E",
+  "icons": [
+    {
+      "src": "/favicon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/favicon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}

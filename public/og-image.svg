@@ -1,54 +1,7 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
-  <defs>
-    <linearGradient id="accent" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#22d3ee"/>
-      <stop offset="100%" stop-color="#34d399"/>
-    </linearGradient>
-    <radialGradient id="glow" cx="0.5" cy="0.1" r="0.7">
-      <stop offset="0%" stop-color="#22d3ee" stop-opacity="0.16"/>
-      <stop offset="100%" stop-color="#22d3ee" stop-opacity="0"/>
-    </radialGradient>
-    <pattern id="grid" width="60" height="60" patternUnits="userSpaceOnUse">
-      <path d="M60 0 H0 V60" fill="none" stroke="#22d3ee" stroke-opacity="0.06" stroke-width="1"/>
-    </pattern>
-  </defs>
-
-  <rect width="1200" height="630" fill="#030712"/>
-  <rect width="1200" height="630" fill="url(#grid)"/>
-  <rect width="1200" height="630" fill="url(#glow)"/>
-
-  <rect x="80" y="150" width="6" height="150" rx="3" fill="url(#accent)"/>
-
-  <text x="118" y="150" font-family="JetBrainsMono NF, DejaVu Sans Mono, monospace"
-        font-size="24" fill="#22d3ee" letter-spacing="4">CYBERSECURITY</text>
-
-  <text x="114" y="238" font-family="DejaVu Sans, sans-serif" font-size="76"
-        font-weight="bold" fill="#e2e8f0" letter-spacing="-2">Naveenkumar V</text>
-
-  <text x="118" y="292" font-family="JetBrainsMono NF, DejaVu Sans Mono, monospace"
-        font-size="27" fill="#94a3b8">Linux · Networking · Pentesting · SIEM</text>
-
-  <g font-family="JetBrainsMono NF, DejaVu Sans Mono, monospace" font-size="21" fill="#67e8f9">
-    <rect x="80" y="372" width="196" height="50" rx="8" fill="#22d3ee" fill-opacity="0.10" stroke="#22d3ee" stroke-opacity="0.28"/>
-    <text x="104" y="404">Penetration</text>
-    <rect x="292" y="372" width="252" height="50" rx="8" fill="#22d3ee" fill-opacity="0.10" stroke="#22d3ee" stroke-opacity="0.28"/>
-    <text x="316" y="404">Threat Intel</text>
-    <rect x="560" y="372" width="216" height="50" rx="8" fill="#22d3ee" fill-opacity="0.10" stroke="#22d3ee" stroke-opacity="0.28"/>
-    <text x="584" y="404">Forensics</text>
-  </g>
-
-  <circle cx="90" cy="510" r="7" fill="#34d399"/>
-  <text x="110" y="518" font-family="JetBrainsMono NF, DejaVu Sans Mono, monospace"
-        font-size="22" fill="#34d399" letter-spacing="2">OPEN TO OPPORTUNITIES</text>
-
-  <text x="80" y="574" font-family="JetBrainsMono NF, DejaVu Sans Mono, monospace"
-        font-size="20" fill="#475569">B.Tech IT · Kongu Engineering College · Erode, India</text>
-
-  <g transform="translate(910, 175)">
-    <path d="M80 0 L160 30 v66c0 50-33 82-80 100-47-18-80-50-80-100V30z"
-          fill="none" stroke="url(#accent)" stroke-width="7"
-          stroke-linecap="round" stroke-linejoin="round" opacity="0.85"/>
-    <path d="M45 100 l25 25 l50 -55" fill="none" stroke="#34d399" stroke-width="7"
-          stroke-linecap="round" stroke-linejoin="round"/>
-  </g>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" fill="none">
+  <rect width="1200" height="630" fill="#0B0F0E"/>
+  <rect x="100" y="100" width="1000" height="430" rx="12" fill="#111715" stroke="#25302C" stroke-width="1"/>
+  <text x="600" y="260" text-anchor="middle" font-family="system-ui, sans-serif" font-weight="700" font-size="48" fill="#F1F5F3">Naveenkumar V</text>
+  <text x="600" y="320" text-anchor="middle" font-family="system-ui, sans-serif" font-weight="400" font-size="24" fill="#9AA8A2">Penetration Tester & Security Researcher</text>
+  <text x="600" y="380" text-anchor="middle" font-family="system-ui, sans-serif" font-weight="500" font-size="18" fill="#4DB87E">NV</text>
 </svg>

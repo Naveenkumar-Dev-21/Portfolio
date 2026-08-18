@@ -1,0 +1,9 @@
+# robots.txt for Naveenkumar V Portfolio
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://naveenkumarv.dev/sitemap.xml
+
+# Host
+Host: https://naveenkumarv.dev
